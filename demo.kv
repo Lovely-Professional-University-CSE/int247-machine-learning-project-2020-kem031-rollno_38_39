@@ -1,0 +1,24 @@
+<LayItOn>
+    orientation: 'vertical'
+    TextInput:
+        id: text_input
+        text: 'ANS'
+        font_size: 150
+        size_hint_y: None
+        height: 200
+    FloatLayout:
+        Label:
+            text: 'Drawing Area'
+            font_size: 100
+            size_hint: None,None
+            center: self.parent.center
+            color: 1,1,1,.1
+        MyPaintWidget
+
+        Button:
+            text: 'clear'
+            size_hint: None,None
+            on_release: root.clear_canvas() 
+            
+
+        
